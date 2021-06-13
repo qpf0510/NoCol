@@ -18,9 +18,9 @@ You can zoom into the simulation by scrolling, and move around by dragging with 
 ```bash
 $ wget https://www.sfml-dev.org/files/SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit.zip && unzip SFML-2.5.1-windows-gcc-7.3.0-mingw-64-bit.zip cmake_modules
 # 静态编译
-$ cmake . -DCMAKE_EXE_LINKER_FLAGS="-static -static-libgcc"
+$ cmake . -DCMAKE_EXE_LINKER_FLAGS="-static -static-libgcc" -DCMAKE_PREFIX_PATH=cmake_modules
 # 动态编译
-$ cmake .
+$ cmake . -DCMAKE_PREFIX_PATH=cmake_modules
 $ make
 $ cp NoCol cmake_modules/bin/
 $ ./cmake_modules/bin/NoCol 
